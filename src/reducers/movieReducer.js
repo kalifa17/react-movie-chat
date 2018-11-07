@@ -16,6 +16,8 @@ export default (state = initialState, action) => {
             };
       
         case actionTypes.FETCH_MOVIES_SUCCESS:
+            console.log("actionTypes.FETCH_MOVIES_SUCCESS");
+            console.log(action.payload);
             initialState.items = action.payload.movies;
             return {
               ...state,
@@ -33,7 +35,7 @@ export default (state = initialState, action) => {
               error: action.payload.error,
               items: []
             };
-
+            
         default:
             return state;
     }
