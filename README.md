@@ -1,44 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Movie Chat
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+![Demo](https://lh3.googleusercontent.com/oZ-bpfc27wjH6T_A1nJazJTj8UuL9yUmgtpfB3W55s6prr10Be5xbcSnaH-c77AhIw488-rr1EvM2XqfVf14xmNTYpDwngdB1qdUF7zlaEbmilR2ERv5iseY0LLUaVQFRVCHk6SDwwRbTavD5dhyyCRPVHiqWSQr_I2IpNvLgL_CsiScBStscU0HxYTJ2PeorPSPlNkg-b9ZCT7d6qRZzYxTfo-VsumwQVyfW8sByEj1HwAI-bhE0w2kkMchrIBMlsKdWUxfBxjWtsmup7TBZ44FDirF221LPu03eV_6K8lEvED3Le-X9OQIGPazgO43eKXh6xc9wnRN7cEX0r1OC1nemKOKdEjS2v-NRBUQsPITUFdqHvckCaZSCveOpsVZwyQx7se-gU5heq2q4IXNf-X5mz8gc2DEha4yknVxKyPvKqBKmLJRI8gMgR-GrBQNxNHJ05MKW-z1x7vA_ieWT1Y0KYQYjUqzVAieEPxRWmswsdLdSu_3AmONlShL0PJeB1vLGQUgjLMjhyCHO735-uzkGdk0H5vj21sQvph_CWX55azT7onrrGuEeCCGBRxhesI73rswi_yKJwLGQVZHObcpzZo618g-RWarVnmVMLBKu2I3dVMSbANNk_x0Q0glpGA5VkI_XjD8eMn2wmNYQMjaJ28vawJ9zYdRcU1n8_sG=w480-h270-no)
 
-### `npm start`
+![Demo](https://lh3.googleusercontent.com/MaXe8sZskDekKty-Ojp_XmHZaFZM1eVxh0rI1P1P8MYy1RLB-ScBGeQznGddc-hU-SFHzulw6dRdaqMI3SpIrOpfjrLLJRsRGjs39wPiPzdkQ4shCTu6MJCp2pARLeMiiUtceh5G4p7MZXNADX5HTa79HJ7azd7QcWMR3n-nlQzBykJn95e_18w6xqIzjDlfh1NAGiSAIGtDKLSGwfouJTwjThtCzFVlASUTCFmDQB1Icv3e9rwXCyuiMQ_bg-M0Oz0-QBRUng9nf-c8hqXHKN4Dp2uhCkoobNLesOLMVz14U7grrVMUjh8AaIEwPFM3E6H5ZLb-AbegWN09YtexbxVDfOqM1uwnc3TrCA05ItoSnos6wc-MOmIzAMyZoqy1x7fLgh98OFXrqHVCsyrP7OdSU1ygJZ2WXsV3uFaUznXGbP0q_UrG5ofTc6vldEcCAf89uHnm__c9-qkpuSxlijAD5gSbZ_gokdcPQUZCrpZ-Ap1uqYHGU-0tmD9YtxxQFFsyWBUT4o61hWv9r4jYl7O_J3sOnHeiY2IIdRxuPxHsl6ZkjRzrau13xLXMsCuiOn_PrnaCQdX56OJ57lfQ109u9sn-KNX61b_YFg8rZD6KLNhcPv_VBVDKz6W31JvmGZm_kguXo1NlBWrmwCny5SdVkJYitDil_9S7jxOIGjYY=w480-h270-no)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Tech
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+* [redux-form](https://redux-form.com/) - The best way to manage your form state in Redux.
+* [Lodash](https://lodash.com/) - A modern JavaScript utility library delivering modularity, performance & extras.
+* [Firebase](https://firebase.google.com/) - Firebase Realtime Database.
+* [Material-UI](https://material-ui.com/) - React components that implement Google's Material Design.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+$ cd react-movie-chat
+$ npm install
+$ npm start
+```

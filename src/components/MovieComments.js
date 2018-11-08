@@ -122,8 +122,6 @@ class MovieComments extends React.Component {
   renderComments = () => {
     const { moviesComments } = this.props;
     const { selection } = this.props;
-    console.log("renderComments");
-    console.log(moviesComments);
     const moviesCommentsSelected = moviesComments.map(moviesCommentsElement => {
       return Object.keys(moviesCommentsElement)
         .filter(key => {
@@ -133,12 +131,9 @@ class MovieComments extends React.Component {
           return moviesCommentsElement[key];
         }, "");
     });
-    console.log(moviesCommentsSelected);
     const commments = _.map(moviesCommentsSelected, (value, key) => {
       return <List dense={true}>{value !== '' ? this.renderComment(value, key) : null}</List>;
     });
-    console.log("commments");
-    console.log(commments);
     if (!_.isEmpty(commments)) {
       return commments;
     }
@@ -147,8 +142,6 @@ class MovieComments extends React.Component {
 
   render() {
     const { selection, classes } = this.props;
-    console.log("const {selection}");
-    console.log(selection);
     if (!_.isEmpty(selection))
       return (
         <Paper className={classes.root}>
