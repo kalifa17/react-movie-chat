@@ -1,7 +1,7 @@
 import * as actionTypes from "./actionTypes";
 import * as movies from "../data/movies";
 
-import { moviesRef } from "../config/firebase";
+import { databaseRef } from "../config/firebase";
 
 export const fetchMoviesSuccess = movies => ({
   type: actionTypes.FETCH_MOVIES_SUCCESS,
@@ -34,7 +34,7 @@ export function fetchMovies() {
         return json;
       })
       .catch(handleErrors => {
-        //Only cause server does not support CORS
+        //Only because server does not support CORS
         dispatch(fetchMoviesSuccess(movies.default));
         return movies.default;
       });
@@ -50,22 +50,18 @@ function handleErrors(response) {
 }
 
 export const addMovieComment = (newMovieComment, uid) => async dispatch => {
-  moviesRef
+  databaseRef
     .child("movieComments")
     .push()
     .set(newMovieComment);
 };
 
 export const fetchMoviesComments = uid => async dispatch => {
-  moviesRef.child("movieComments").on("value", snapshot => {
-//   moviesRef.on("value", snapshot => {
-    console.log("fetchMoviesComments");
-    console.log(snapshot.val());
+  databaseRef.child("movieComments").on("value", snapshot => {
     let movieComments = [];
-    snapshot.forEach((childSnapshot) => {
-        movieComments.push(childSnapshot.val());
+    snapshot.forEach(childSnapshot => {
+      movieComments.push(childSnapshot.val());
     });
-    console.log(movieComments);
     dispatch({
       type: actionTypes.FETCH_MOVIES_COMMENTS,
       payload: movieComments

@@ -30,21 +30,27 @@ const columns = [
   }
 ];
 
-const MovieList = ({ movies, sorting, changeSorting, changeSelection, selection }) => (
+const MovieList = ({
+  movies,
+  sorting,
+  changeSorting,
+  changeSelection,
+  selection
+}) => (
   <Paper>
     <Grid rows={movies} columns={columns}>
       <SortingState sorting={sorting} onSortingChange={changeSorting} />
       <IntegratedSorting />
       <FilteringState defaultFilters={[]} />
       <IntegratedFiltering />
-      <SelectionState
-            onSelectionChange={changeSelection}
-    />
+      <SelectionState onSelectionChange={changeSelection} />
       <Table />
       <TableHeaderRow showSortingControls />
       <TableSelection
-            selectByRowClick
-          />
+        selectByRowClick
+        highlightRow
+        showSelectionColumn={false}
+      />
       <TableFilterRow />
     </Grid>
   </Paper>

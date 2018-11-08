@@ -13,25 +13,25 @@ class MovieListContainer extends React.Component {
     };
     this.changeSorting = sorting => this.setState({ sorting });
     this.changeSelection = selection => {
-        console.log("selection");
-        console.log(selection);
-        this.setState({ selection })};
+      this.setState({ selection });
+    };
   }
   componentDidMount() {
     this.props.fetchMovies();
   }
 
   render() {
-    const { movies, moviesComments } = this.props;
-    const { sorting } = this.state;
-    const propsMovieList = { movies, sorting, changeSorting: this.changeSorting, changeSelection : this.changeSelection };
-    console.log("propsMovieList");
-    console.log(propsMovieList);
-    console.log("moviesComments");
-    console.log(moviesComments);
+    const { movies } = this.props;
+    const { sorting, selection } = this.state;
+    const propsMovieList = {
+      movies,
+      sorting,
+      changeSorting: this.changeSorting,
+      changeSelection: this.changeSelection
+    };
     return (
       <div>
-        <MovieComments />
+        <MovieComments selection={selection} />
         <MovieList {...propsMovieList} />
       </div>
     );
@@ -47,8 +47,7 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => ({
   movies: state.movies.items,
   loading: state.movies.loading,
-  error: state.movies.error,
-  moviesComments: state.moviesComments.items,
+  error: state.movies.error
 });
 
 export default connect(
