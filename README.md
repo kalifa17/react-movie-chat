@@ -22,3 +22,13 @@ $ cd react-movie-chat
 $ npm install
 $ npm start
 ```
+
+### What could be improved?
+
+* Formatting data within the table
+* Add pagination to the table to improve performance when loading or sorting.
+* Include React Router to have the comments on another page.
+* Improve user experience when clicking to a movie (row), for instance the raw can be highlighted when hovering.
+* Add a type checker like Flow.
+* Create another container component for movie comments and separate the presentation component.
+* Add unit testing (Jest, Enzyme).
