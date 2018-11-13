@@ -41,14 +41,6 @@ export function fetchMovies() {
   };
 }
 
-function handleErrors(response) {
-  if (!response.ok) {
-    console.error(response);
-    throw Error(response.statusText);
-  }
-  return response;
-}
-
 export const addMovieComment = (newMovieComment, uid) => async dispatch => {
   databaseRef
     .child("movieComments")

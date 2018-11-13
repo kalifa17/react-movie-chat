@@ -2,15 +2,10 @@ import { addMovieComment, fetchMoviesComments } from "../actions/movieAction";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import Icon from "@material-ui/core/Icon";
-import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
-import MovieList from "./MovieList";
 import Paper from "@material-ui/core/Paper";
 import PersonIcon from "@material-ui/icons/Person";
 import React from "react";
@@ -125,7 +120,7 @@ class MovieComments extends React.Component {
     const moviesCommentsSelected = moviesComments.map(moviesCommentsElement => {
       return Object.keys(moviesCommentsElement)
         .filter(key => {
-          return key == selection[0];
+          return key+'' === selection[0]+'';
         })
         .reduce((obj, key) => {
           return moviesCommentsElement[key];
